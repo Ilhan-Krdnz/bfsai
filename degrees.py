@@ -189,7 +189,10 @@ def shortest_path(source, target):
             ft = find_path(explored_obj)
             ft.reverse()
             for i in ft:
-                print(people[i.state]['name'])
+                if i.action ==None:
+                    print(people[i.state]['name'])
+                else:
+                    print(people[i.state]['name'],movies[i.action]['title'])
             
             mainloop = False
 
